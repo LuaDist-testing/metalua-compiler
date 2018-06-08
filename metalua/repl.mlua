@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- Copyright (c) 2006-2013 Fabien Fleutot and others.
+-- Copyright (c) 2006-2015 Fabien Fleutot and others.
 --
 -- All rights reserved.
 --
@@ -57,7 +57,7 @@ end
 
 function M.run()
     pp.printf ("Metalua, interactive REPLoop.\n"..
-            "(c) 2006-2013 <metalua@gmail.com>")
+            "(c) 2006-2015 <metalua@gmail.com>")
    local lines = { }
    while true do
       local src, lx, ast, f, results, success

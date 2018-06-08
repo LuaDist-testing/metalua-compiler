@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- Copyright (c) 2006-2013 Fabien Fleutot and others.
+-- Copyright (c) 2006-2015 Fabien Fleutot and others.
 --
 -- All rights reserved.
 --
@@ -17,7 +17,10 @@
 --
 -------------------------------------------------------------------------------
 
-local checks = require 'checks'
+local checksstatus, checks = pcall(require, 'checks')
+if not checksstatus then
+    checks = require 'metalua.checks'
+end
 
 local M = { }
 

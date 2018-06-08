@@ -1,18 +1,10 @@
--- This file was automatically generated for the LuaDist project.
-
 --*-lua-*--
 package = "metalua-compiler"
 version = "0.7.2-1"
--- LuaDist source
 source = {
-  tag = "0.7.2-1",
-  url = "git://github.com/LuaDist-testing/metalua-compiler.git"
+   url = "git://git.eclipse.org/gitroot/koneki/org.eclipse.koneki.metalua.git",
+   tag = "v0.7.2",
 }
--- Original source
--- source = {
---    url = "git://git.eclipse.org/gitroot/koneki/org.eclipse.koneki.metalua.git",
---    tag = "v0.7.2",
--- }
 
 description = {
     summary = "Metalua's compiler: converting (Meta)lua source strings and files into executable Lua 5.1 bytecode",

@@ -1,7 +1,7 @@
 #!/usr/bin/env lua51
 --*-lua-*----------------------------------------------------------------------
 --
--- Copyright (c) 2006-2014 Fabien Fleutot and others.
+-- Copyright (c) 2006-2015 Fabien Fleutot and others.
 --
 -- All rights reserved.
 --
@@ -27,7 +27,11 @@
 -- @module metalua
 
 -- Survive lack of checks
-if not pcall(require, 'checks') then function package.preload.checks() function checks() end end end
+local checksstatus, checks = pcall(require, 'checks')
+if not checksstatus then
+    checksstatus, checks = pcall(require, 'metalua.checks')
+    if not checksstatus then function package.preload.checks() function checks() end end end
+end
 
 -- Main file for the metalua executable
 require 'metalua.loader' -- load *.mlue files
